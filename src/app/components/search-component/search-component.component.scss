@@ -1,0 +1,54 @@
+*{
+  outline: none!important;
+}
+.input-wrap {
+  float: left;
+  width: 173px;
+  .error{
+    display: block;
+    margin-top: 5px;
+    color: #BD0000;
+  }
+}
+.list-wrap{
+  float: right;
+  width: calc(100% - 200px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  .cinema-item{
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover{
+      background: #cccccc;
+      color: #fff;
+    }
+  }
+}
+.delete-btn, .back-btn{
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #bd0000;
+  color: #BD0000;
+  background: transparent;
+  box-shadow: none;
+  transition: all 300ms ease;
+  &:hover{
+    background: #bd0000;
+    color: #fff;
+  }
+}
+.back-btn{
+  border: 0;
+  color: #fff;
+  background: #b7b7b7;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px;
+  text-align: center;
+  height: 100%;
+  &:hover{
+    background: #858585;
+  }
+}

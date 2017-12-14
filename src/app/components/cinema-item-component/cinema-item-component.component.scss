@@ -1,0 +1,12 @@
+table{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 200px);
+  margin-left: 200px;
+
+  tr{
+    td{
+      border-top: 1px solid #ccc;
+    }
+  }
+}

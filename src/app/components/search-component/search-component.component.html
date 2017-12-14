@@ -1,0 +1,25 @@
+<div class="search-component-wrap">
+  <div class="search-wrap" *ngIf="!cinemaDetailView">
+
+    <div class="input-wrap">
+      <input autocomplete
+             [items]="cinemaItems"
+             [config]="config"
+             (inputChangedEvent)="search($event)"
+             (selectEvent)="onSelect($event)"
+      >
+      <span class="error" *ngIf="error">{{error}}</span>
+    </div>
+
+
+    <table *ngIf="cinemaItemsList" class="list-wrap">
+      <tr *ngFor="let cinema of cinemaItemsList; let i = index" >
+        <td (click)="viewCinemaDetails(cinema.imdbID)" class="cinema-item">{{ cinema.Title }}</td>
+        <td><button  (click)="delete(i)" class="delete-btn">delete</button></td>
+      </tr>
+    </table>
+
+  </div>
+  <app-cinema-item-component  *ngIf="cinemaDetailView" [cinema]="cinemaDetails"></app-cinema-item-component>
+  <button *ngIf="cinemaDetailView" (click)="cinemaDetailView = !cinemaDetailView" class="back-btn">Back</button>
+</div>
